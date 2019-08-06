@@ -9,7 +9,7 @@ The first part of this code takes the list of station codes and names, and tacks
 Assuming that the coordinates of a station are time-invariant, this file need only be generated once and this section of code truncated.
 
 The second part of this code takes every Station GPS pair and runs it through the OneMap routing service, which in turn polls Google Map's service. The mode is set to TRANSIT. The time and date of transit is assumed by this code to be 2019-02-22 at 1200h.
-This API returns up to three "itineraries"; the last part of the code iterates over these itineraries to find which the shortest is, by 
+This API returns up to three "itineraries"; the last part of the code iterates over these itineraries to find which the shortest is, by summing the legs within the itineraries and comparing the sum.
 
 
 Simplifying assumptions:
